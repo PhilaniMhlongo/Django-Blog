@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="logo">
+        <a><span>Software.</span>Bytes</a>
+    </div>
+    
+    {% for post in posts%}
+    <div class="form">
+        <div class="title">
+            <span>{{ post.title }}</span>
+        </div>
+    <!-- <h2>{{ post.title }}</h2> -->
+    <div class="content">
+        <p>{{ post.content }}</p>
+    </div>
+    <!-- <p>{{ post.content }}</p> -->
+    <small>Published on {{ post.published_at }} by {{ post.author}}</small>
+    {% endfor%}
+</div>
+{% endblock %}
+
+
