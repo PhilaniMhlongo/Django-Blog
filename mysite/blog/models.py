@@ -4,10 +4,16 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
+class PublishedManager(models.Manager):
+    def get_queryset(self) -> models.QuerySet:
+        # How you want to filter your post
+        return super().get_queryset().filter(status=Post.Status.PUBLISHED)
 class Post(models.Model):
     class Status(models.TextChoices):
         DRAFT='DF','Draft'
         PUBLISHED='PB','Published'
+
+    # Model fields
 
     title=models.CharField(max_length=250)
     slug=models.SlugField(max_length=250)
@@ -19,6 +25,9 @@ class Post(models.Model):
     updated=models.DateTimeField(auto_now=True)
 
     status=models.CharField(max_length=2,choices=Status.choices,default=Status.DRAFT)
+
+    objects=models.Manager()# the default manager
+    published=PublishedManager() #Our custom manager
 
 
     class Meta:
