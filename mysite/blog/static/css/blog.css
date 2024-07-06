@@ -10,6 +10,8 @@ body {
     font-size: 2em;
     font-family: "Reenie Beanie", cursive;
     padding: 10px 20px;
+    top: 0%;
+    left: 0%;
   }
 
 a { 
@@ -48,7 +50,16 @@ h2 {
     float:left;
     width:60%;
     padding:0 0 0 30px; 
+   
+    
 }
+
+#content h1{
+    color:#00abff;
+    text-decoration:none;
+}
+
+
 
 #sidebar { 
     float:right;
@@ -57,6 +68,7 @@ h2 {
     background:#efefef; 
     height:100%;
 }
+
 
 p.date { 
     color:#ccc;
@@ -89,11 +101,12 @@ input, textarea {
 }
 input[type=submit] {
     font-weight:bold;
-    background:#00abff;
+    background:#ffffff;
     color:#fff;
     padding:10px 20px;
     font-size:14px;
     text-transform:uppercase; 
+    cursor: pointer;
 }
 .errorlist { 
     color:#cc0033;

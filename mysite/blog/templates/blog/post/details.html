@@ -4,7 +4,9 @@
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
-  <h1>{{ post.title }}</h1>
+<div class="container">
+  <div class="row">
+  <h2>{{ post.title }}</h2>
   <p class="date">
     Published {{ post.publish }} by {{ post.author }}
   </p>
@@ -14,4 +16,6 @@
     Share this post
     </a>
   </p>
+</div>
+</div>
 {% endblock %}

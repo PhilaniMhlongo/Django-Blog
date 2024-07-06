@@ -13,3 +13,4 @@ def total_posts():
 @register.filter(name='markdown')
 def markdown_format(text):
     return mark_safe(markdown.markdown(text))
+

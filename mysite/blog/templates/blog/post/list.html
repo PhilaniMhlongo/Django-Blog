@@ -6,8 +6,16 @@
 <div class="logo">
     <a class="logo"><span>Software.</span>Bytes</a>
 </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto col-md-8 col-12">
+
 {% for post in posts %}
-    <h2>
+
+
+    <h2 >
         <a href="{{ post.get_absolute_url }}">
             {{ post.title }}
         </a>
@@ -17,6 +25,10 @@
     </p>
     {{ post.body|markdown|truncatewords_html:30 }}`
     {% endfor %}
+        
+        </div>
+    </div>
+</div>
     {% include "pagination.html" with page=page_obj %}
     {% endblock %}
 
