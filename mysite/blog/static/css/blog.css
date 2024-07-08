@@ -116,13 +116,18 @@ input[type=submit] {
 }
 
 /* comments */
-.comment {
-    padding:10px;
+
+.container .row .comment {
+  border-top: 1px solid #e6e6e6;
+  margin-right: 1rem;
+  padding-bottom: 0.125rem;
+  width: 80%;
 }
-.comment:nth-child(even) {
+.container .row .comment:nth-child(even) {
+    margin-right: auto;
     background:#efefef;
 }
-.comment .info {
+.container .row .comment .info {
     font-weight:bold;
     font-size:12px;
     color:#666;

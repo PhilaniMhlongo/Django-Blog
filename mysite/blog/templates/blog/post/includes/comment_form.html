@@ -1,7 +1,11 @@
+<div class="form-text form-floating">
+
 <h2>Add a new comment</h2>
+
 <form action="{% url "blog:post_comment" post.id %}" method="post">
   {{ form.as_p }}
   {% csrf_token %}
-  <p><input type="submit" value="Add comment"></p>
+  <p><input class="btn btn-light btn-lg px-4 me-md-2" type="submit" value="Add comment"></p>
+  
 </form>
-
+</div>
